@@ -1,0 +1,30 @@
+@import '~antd/lib/style/themes/default.less';
+
+:global(#root) {
+  height: 100%;
+
+  max-width: 100vw;
+  max-height: 100vh;
+
+  overflow: hidden;
+}
+
+.layout {
+  height: 100%;
+}
+
+.header {
+  background-color: @primary-color;
+  .title {
+    margin: 0;
+    line-height: 64px;
+    color: white;
+  }
+}
+
+.content {
+  padding: 16px;
+
+  overflow: hidden;
+  overflow-y: auto;
+}
