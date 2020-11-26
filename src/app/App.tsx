@@ -11,10 +11,6 @@ import Message from '~/components/Message';
  * Constants
  *****************************************************************************/
 const DEFAULT_CONFIG: Partial<Config> = {
-  // appId: 'e9bb530bcd13499cbbfe965bce9443cc',
-  // channel: '1',
-  // token:
-  //   '006e9bb530bcd13499cbbfe965bce9443ccIADjDwgd0TzsZ3CseaWVjEurpLZTDEzll4AC7JDXY5+hhrfv3IMAAAAAEACVypXNEB/BXwEAAQAPH8Ff',
   mode: 'live',
   codec: 'vp8',
 };

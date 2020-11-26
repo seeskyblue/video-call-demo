@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { ClientConfig } from 'agora-rtc-sdk';
 import { Button, Card, Col, Form, Input, Radio, Row, Select } from 'antd';
 
-import style from './style.less';
+import type { JoinConfig } from '../AgoraClient/hooks';
 
-import { useCamera, useMicrophone } from '~/hooks/useDevice';
+import { useCamera, useMicrophone } from './hooks';
+import style from './style.less';
 
 /*****************************************************************************
  * Constants
@@ -14,22 +14,11 @@ const GUTTER = 10;
 /*****************************************************************************
  * Types
  *****************************************************************************/
-export type Config = {
-  mode: ClientConfig['mode'];
-  codec: ClientConfig['codec'];
-  uid?: string | number;
-  appId: string;
-  channel: string;
-  token: string;
-  cameraId?: string;
-  microphoneId?: string;
-};
-
 export interface Props {
-  defaultConfig: Partial<Config>;
+  defaultConfig: Partial<JoinConfig>;
   joined?: boolean;
   published?: boolean;
-  onJoin: (config: Config) => void;
+  onJoin: (config: JoinConfig) => void;
   onLeave: () => void;
   onPublish: () => void;
   onUnpublish: () => void;

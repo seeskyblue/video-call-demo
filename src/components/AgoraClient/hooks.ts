@@ -42,7 +42,7 @@ type Action =
   | { type: 'UNPUBLISH_SUCCESS'; info: string }
   | { type: 'UNPUBLISH_FAILURE'; error: string };
 
-interface JoinConfig {
+export interface JoinConfig {
   mode: ClientConfig['mode'];
   codec: ClientConfig['codec'];
   uid?: string | number;
